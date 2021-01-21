@@ -25,7 +25,7 @@ public class UserTest {
     @Test
     public void testAdd() {
         Users user = new Users() ;
-        user.setPassword("123");
+        user.setPassword("123566");
         user.setUsername("enjoy");
         usersMapper.insertSelective(user);
     }
@@ -33,6 +33,7 @@ public class UserTest {
     @Test
     public void testFindUser() {
         Users enjoy = usersMapper.findByUsernameAndPasswd("enjoy", "123");
+        System.out.println(123);
         System.out.println(enjoy);
     }
 }

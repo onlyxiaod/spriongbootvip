@@ -40,10 +40,10 @@
 
   <select id="findByUsernameAndPasswd" resultType="cn.enjoy.model.Users" parameterType="map">
     select
-    <include refid="Base_Column_List" />
+        *
     from enjoy_user where 1=1
-    <if test="passwd != null" >
-      and passwd = #{passwd,jdbcType=VARCHAR}
+    <if test="password != null" >
+      and password = #{password,jdbcType=VARCHAR}
     </if>
     <if test="username != null" >
       and username = #{username,jdbcType=VARCHAR}

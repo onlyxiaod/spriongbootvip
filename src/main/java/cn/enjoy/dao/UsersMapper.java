@@ -4,11 +4,11 @@ import cn.enjoy.model.Users;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
-@Mapper
+//@Mapper
 public interface UsersMapper {
     int insert(Users record);
 
     int insertSelective(Users record);
 
-    Users findByUsernameAndPasswd(@Param("username") String username, @Param("passwd") String passwd);
+    Users findByUsernameAndPasswd(@Param("username") String username, @Param("password") String passwd);
 }
